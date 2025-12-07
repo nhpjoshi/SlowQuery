@@ -19,7 +19,7 @@ function askQuestion(prompt) {
 
 // ---------- Get threshold (durationMillis) ----------
 async function getThresholdFromArgsOrPrompt() {
-  const arg = process.argv[2]; // node runSlowQueries.js <threshold> <projectId> <lookbackMinutes>
+  const arg = process.argv[2];
 
   if (arg && !isNaN(Number(arg))) {
     const val = Number(arg);
@@ -43,7 +43,7 @@ async function getThresholdFromArgsOrPrompt() {
 
 // ---------- Get projectId (GROUP_ID) ----------
 async function getProjectIdFromArgsOrPrompt() {
-  const arg = process.argv[3]; // node runSlowQueries.js <threshold> <projectId> <lookbackMinutes>
+  const arg = process.argv[3];
 
   if (arg) {
     console.log(`Using projectId from CLI argument: ${arg}`);
@@ -62,42 +62,41 @@ async function getProjectIdFromArgsOrPrompt() {
   return projectId;
 }
 
-// ---------- Get 'since' (epoch ms) based on lookback minutes ----------
+// ---------- Get 'since' (epoch ms) based on HOURS ----------
 async function getSinceMsFromArgsOrPrompt() {
-  const arg = process.argv[4]; // node runSlowQueries.js <threshold> <projectId> <lookbackMinutes>
+  const arg = process.argv[4];
 
   if (arg && !isNaN(Number(arg))) {
-    const minutes = Number(arg);
-    if (minutes > 0) {
-      const sinceMs = Date.now() - minutes * 60 * 1000;
+    const hours = Number(arg);
+    if (hours > 0) {
+      const sinceMs = Date.now() - hours * 60 * 60 * 1000;
       console.log(
-        `Using 'since' from CLI: now - ${minutes} minutes → ${sinceMs} (epoch ms)`
+        `Using 'since' from CLI: now - ${hours} hours → ${sinceMs} (epoch ms)`
       );
-      return { sinceMs, lookbackMinutes: minutes };
+      return { sinceMs, hours };
     }
   }
 
   const answer = await askQuestion(
-    "Look back how many minutes for slow queries? (blank = last 24h by default from API): "
+    "Look back how many HOURS for slow queries? (blank = last 24h default): "
   );
   const trimmed = answer.trim();
 
   if (!trimmed) {
     console.log("No lookback specified → API default (previous 24 hours).");
-    return { sinceMs: null, lookbackMinutes: null };
+    return { sinceMs: null, hours: null };
   }
 
-  const minutes = Number(trimmed);
-  if (isNaN(minutes) || minutes <= 0) {
-    console.log("Invalid minutes → using API default (previous 24 hours).");
-    return { sinceMs: null, lookbackMinutes: null };
+  const hours = Number(trimmed);
+  if (isNaN(hours) || hours <= 0) {
+    console.log("Invalid hours → using API default (previous 24 hours).");
+    return { sinceMs: null, hours: null };
   }
 
-  const sinceMs = Date.now() - minutes * 60 * 1000;
-  console.log(
-    `Using 'since' = now - ${minutes} minutes → ${sinceMs} (epoch ms)`
-  );
-  return { sinceMs, lookbackMinutes: minutes };
+  const sinceMs = Date.now() - hours * 60 * 60 * 1000;
+  console.log(`Using 'since' = now - ${hours} hours → ${sinceMs} (epoch ms)`);
+
+  return { sinceMs, hours };
 }
 
 // ---------- Run shell with MODE=LIST_PROCESSES ----------
@@ -142,7 +141,7 @@ function fetchSlowForProcess(projectId, processId, sinceMs) {
     };
 
     if (sinceMs != null) {
-      env.SINCE_MS = String(sinceMs); // used by shell as ?since=<epoch ms>
+      env.SINCE_MS = String(sinceMs);
     }
 
     const child = spawn("bash", [scriptPath], { env });
@@ -154,11 +153,9 @@ function fetchSlowForProcess(projectId, processId, sinceMs) {
     child.stderr.on("data", (data) => (stderrData += data.toString()));
 
     child.on("close", (code) => {
-      if (code === 0) {
-        resolve(stdoutData);
-      } else {
+      if (code === 0) resolve(stdoutData);
+      else
         reject(new Error(`FETCH_SLOW error for ${processId}:\n${stderrData}`));
-      }
     });
   });
 }
@@ -170,11 +167,12 @@ function groupProcessesByCluster(raw) {
     .map((l) => l.trim())
     .filter((l) => l.startsWith("{") && l.endsWith("}"));
 
-  const clusters = {}; // { [clusterName]: [ {id, typeName, userAlias}, ... ] }
+  const clusters = {};
 
   for (const line of lines) {
     try {
-      const obj = JSON.parse(line); // {id, typeName, userAlias, clusterName}
+      const obj = JSON.parse(line);
+
       if (!obj.id) continue;
 
       const clusterName = obj.clusterName || "UNKNOWN_CLUSTER";
@@ -182,8 +180,8 @@ function groupProcessesByCluster(raw) {
       if (!clusters[clusterName]) clusters[clusterName] = [];
       clusters[clusterName].push({
         id: obj.id,
-        typeName: obj.typeName || "UNKNOWN",
-        userAlias: obj.userAlias || "UNKNOWN",
+        typeName: obj.typeName,
+        userAlias: obj.userAlias,
       });
     } catch {
       console.log("Skipping invalid process JSON line...");
@@ -197,41 +195,27 @@ function groupProcessesByCluster(raw) {
 async function chooseCluster(clusters) {
   const names = Object.keys(clusters);
 
-  if (names.length === 0) {
-    throw new Error("No clusters found from processes.");
-  }
+  if (names.length === 0) throw new Error("No clusters found.");
 
-  console.log(
-    "\nAvailable clusters (derived from userAlias before '-shard-'):"
-  );
+  console.log("\nAvailable clusters:");
   names.forEach((name, idx) => {
-    console.log(
-      `${idx + 1}) cluster: ${name}  (processes: ${clusters[name].length})`
-    );
+    console.log(`${idx + 1}) ${name}  (${clusters[name].length} processes)`);
   });
 
-  const answer = await askQuestion(
-    "\nSelect a cluster to analyse slow queries (enter number): "
-  );
-  const idx = Number(answer) - 1;
+  const ans = await askQuestion("\nSelect a cluster number: ");
+  const idx = Number(ans) - 1;
 
   if (isNaN(idx) || idx < 0 || idx >= names.length) {
     throw new Error("Invalid cluster selection.");
   }
 
-  const chosenName = names[idx];
-  const processes = clusters[chosenName];
+  const chosen = names[idx];
+  console.log(`\nSelected cluster: ${chosen}`);
 
-  console.log(`\nSelected cluster: ${chosenName}`);
-  console.log("Processes in this cluster:");
-  processes.forEach((p) =>
-    console.log(` - ${p.typeName} | ${p.userAlias} | id: ${p.id}`)
-  );
-
-  return { clusterName: chosenName, processes };
+  return { clusterName: chosen, processes: clusters[chosen] };
 }
 
-// ---------- Parse slow queries & filter by durationMillis ----------
+// ---------- Parse slow queries ----------
 function extractSlowQueries(rawText, threshold) {
   const results = [];
 
@@ -242,10 +226,10 @@ function extractSlowQueries(rawText, threshold) {
 
   for (const line of lines) {
     try {
-      const outer = JSON.parse(line); // has .line and .namespace
-      if (!outer.line) continue;
+      const outer = JSON.parse(line);
 
-      const inner = JSON.parse(outer.line); // log JSON from MongoDB
+      const inner = JSON.parse(outer.line);
+
       const ms = inner?.attr?.durationMillis;
 
       if (typeof ms === "number" && ms > threshold) {
@@ -256,7 +240,7 @@ function extractSlowQueries(rawText, threshold) {
         });
       }
     } catch {
-      console.log("Skipping invalid JSON line (slow query)...");
+      console.log("Skipping invalid JSON line...");
     }
   }
 
@@ -268,55 +252,45 @@ async function main() {
   try {
     const threshold = await getThresholdFromArgsOrPrompt();
     const projectId = await getProjectIdFromArgsOrPrompt();
-    const { sinceMs, lookbackMinutes } = await getSinceMsFromArgsOrPrompt();
+    const { sinceMs, hours } = await getSinceMsFromArgsOrPrompt();
 
-    console.log("\nListing processes from Atlas...");
+    console.log("\nListing processes...");
     const processRaw = await listProcesses(projectId);
 
     const clusters = groupProcessesByCluster(processRaw);
     const { clusterName, processes } = await chooseCluster(clusters);
 
-    let allSlowQueries = [];
+    let allSlow = [];
 
     for (const p of processes) {
-      console.log(`\nFetching slow queries for process: ${p.id}`);
+      console.log(`\nFetching slow queries for process ${p.id}`);
       const slowRaw = await fetchSlowForProcess(projectId, p.id, sinceMs);
-      const slowForProcess = extractSlowQueries(slowRaw, threshold);
-      allSlowQueries = allSlowQueries.concat(slowForProcess);
+      const extracted = extractSlowQueries(slowRaw, threshold);
+      allSlow = allSlow.concat(extracted);
     }
 
     console.log(
-      `\nTotal slow queries (> ${threshold} ms) for cluster "${clusterName}"${
-        lookbackMinutes ? ` in last ${lookbackMinutes} minutes` : ""
-      }: ${allSlowQueries.length}`
+      `\nFound ${allSlow.length} slow queries (> ${threshold} ms)${
+        hours ? ` in last ${hours} hours` : " (default last 24h)"
+      }.`
     );
 
-    // Sort by durationMillis descending
-    allSlowQueries.sort((a, b) => b.durationMillis - a.durationMillis);
+    allSlow.sort((a, b) => b.durationMillis - a.durationMillis);
 
     const safeCluster = clusterName.replace(/[^a-zA-Z0-9._-]/g, "_");
     const suffix =
-      lookbackMinutes != null
-        ? `${threshold}_${lookbackMinutes}m`
-        : `${threshold}_24hDefault`;
+      hours != null ? `${threshold}_${hours}h` : `${threshold}_24hDefault`;
 
-    const outputFilename = path.join(
+    const outputFile = path.join(
       __dirname,
-      `slow_queries_cluster_${safeCluster}_${suffix}.json`
+      `slow_queries_${safeCluster}_${suffix}.json`
     );
 
-    fs.writeFileSync(outputFilename, JSON.stringify(allSlowQueries, null, 2));
-    console.log(`\nSaved sorted results → ${outputFilename}`);
+    fs.writeFileSync(outputFile, JSON.stringify(allSlow, null, 2));
+    console.log(`\nSaved → ${outputFile}`);
   } catch (err) {
     console.error("\nError:", err.message);
   }
 }
 
 if (require.main === module) main();
-
-module.exports = {
-  listProcesses,
-  fetchSlowForProcess,
-  extractSlowQueries,
-  groupProcessesByCluster,
-};
