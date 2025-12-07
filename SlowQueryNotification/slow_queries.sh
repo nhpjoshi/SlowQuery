@@ -6,8 +6,9 @@ PRIVATE_KEY=""
 GROUP_ID="${GROUP_ID:?GROUP_ID environment variable not set}"
 
 BASE_URL="https://cloud.mongodb.com/api/atlas/v2"
-
 MODE="${MODE:?MODE environment variable not set}"
+
+SINCE_MS="${SINCE_MS:-}"   # 👈 optional, passed from Node
 
 CURL_COMMON=(
   --user "$PUBLIC_KEY:$PRIVATE_KEY"
@@ -22,8 +23,7 @@ if [ "$MODE" = "LIST_PROCESSES" ]; then
   PROCESSES_RESPONSE=$(curl "${CURL_COMMON[@]}" \
     "$BASE_URL/groups/$GROUP_ID/processes")
 
-  # Output one compact JSON per line:
-  # { id, typeName, userAlias, clusterName }
+  # id, typeName, userAlias, clusterName (substring before -shard-)
   echo "$PROCESSES_RESPONSE" | jq -c '
     .results // [] 
     | .[] 
@@ -32,8 +32,10 @@ if [ "$MODE" = "LIST_PROCESSES" ]; then
         typeName,
         userAlias,
         clusterName: (
-          .userAlias 
-          | (split("-")[0] // "UNKNOWN")
+          if (.userAlias | contains("-shard-")) 
+          then .userAlias | split("-shard-")[0]
+          else .userAlias | split("-")[0]
+          end
         )
       }
   '
@@ -45,9 +47,14 @@ elif [ "$MODE" = "FETCH_SLOW" ]; then
 
   API_URL="$BASE_URL/groups/$GROUP_ID/processes/$PROCESS_ID/performanceAdvisor/slowQueryLogs"
 
+  # 👇 If SINCE_MS is set, add it as ?since=<ms>
+  if [ -n "$SINCE_MS" ]; then
+    API_URL="$API_URL?since=$SINCE_MS"
+  fi
+
   RAW_RESPONSE=$(curl "${CURL_COMMON[@]}" "$API_URL")
 
-  # Print each slow query as a single JSON line (NDJSON)
+  # one JSON slowQuery per line (NDJSON)
   echo "$RAW_RESPONSE" | jq -c '.slowQueries // [] | .[]' 2>/dev/null
 
 else
