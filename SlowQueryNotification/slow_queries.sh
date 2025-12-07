@@ -3,11 +3,11 @@
 # --- MongoDB Atlas Credentials ---
 PUBLIC_KEY=""
 PRIVATE_KEY=""
-GROUP_ID=""
+GROUP_ID="${GROUP_ID:?GROUP_ID environment variable not set}" 
 
 BASE_URL="https://cloud.mongodb.com/api/atlas/v2"
 
-echo "🔍 Fetching processes for group: $GROUP_ID ..."
+echo "s Fetching processes for group: $GROUP_ID ..."
 
 # 1) Get all processes for the group
 PROCESSES_RESPONSE=$(curl --user "$PUBLIC_KEY:$PRIVATE_KEY" \

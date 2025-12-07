@@ -37,12 +37,47 @@ function getThresholdFromArgsOrPrompt() {
   });
 }
 
+// ---------- Ask for projectId (GROUP_ID) ----------
+function getProjectIdFromArgsOrPrompt() {
+  return new Promise((resolve) => {
+    const arg = process.argv[3]; // CLI format: node runSlowQueries.js <threshold> <projectId>
+
+    if (arg) {
+      console.log(`Using projectId from CLI argument: ${arg}`);
+      return resolve(arg);
+    }
+
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    rl.question("Enter Atlas Project ID (GROUP_ID): ", (answer) => {
+      rl.close();
+      const projectId = answer.trim();
+
+      if (!projectId) {
+        console.log("No projectId entered. Exiting.");
+        process.exit(1);
+      }
+
+      console.log(`Using projectId: ${projectId}`);
+      resolve(projectId);
+    });
+  });
+}
+
 // ---------- Execute the Shell Script ----------
-function runSlowQueriesScript() {
+function runSlowQueriesScript(projectId) {
   return new Promise((resolve, reject) => {
     const scriptPath = path.join(__dirname, "slow_queries.sh");
 
-    const child = spawn("bash", [scriptPath]);
+    const child = spawn("bash", [scriptPath], {
+      env: {
+        ...process.env,
+        GROUP_ID: projectId, // <-- pass projectId as GROUP_ID env var
+      },
+    });
 
     let stdoutData = "";
     let stderrData = "";
@@ -94,6 +129,7 @@ function extractSlowQueries(rawText, threshold) {
 async function main() {
   try {
     const threshold = await getThresholdFromArgsOrPrompt();
+    const projectId = await getProjectIdFromArgsOrPrompt();
 
     const outputFilename = path.join(
       __dirname,
@@ -101,7 +137,7 @@ async function main() {
     );
 
     console.log("Running shell script...");
-    const raw = await runSlowQueriesScript();
+    const raw = await runSlowQueriesScript(projectId);
 
     console.log("Filtering results...");
     let queries = extractSlowQueries(raw, threshold);
