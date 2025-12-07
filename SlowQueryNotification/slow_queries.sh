@@ -3,46 +3,54 @@
 # --- MongoDB Atlas Credentials ---
 PUBLIC_KEY=""
 PRIVATE_KEY=""
-GROUP_ID="${GROUP_ID:?GROUP_ID environment variable not set}" 
+GROUP_ID="${GROUP_ID:?GROUP_ID environment variable not set}"
 
 BASE_URL="https://cloud.mongodb.com/api/atlas/v2"
 
-echo "s Fetching processes for group: $GROUP_ID ..."
+MODE="${MODE:?MODE environment variable not set}"
 
-# 1) Get all processes for the group
-PROCESSES_RESPONSE=$(curl --user "$PUBLIC_KEY:$PRIVATE_KEY" \
-  --digest \
-  --silent \
-  --header "Accept: application/vnd.atlas.2025-03-12+json" \
-  "$BASE_URL/groups/$GROUP_ID/processes")
+CURL_COMMON=(
+  --user "$PUBLIC_KEY:$PRIVATE_KEY"
+  --digest
+  --silent
+  --header "Accept: application/vnd.atlas.2025-03-12+json"
+)
 
-# Extract process IDs
-PROCESS_IDS=$(echo "$PROCESSES_RESPONSE" | jq -r '.results[].id // empty')
+if [ "$MODE" = "LIST_PROCESSES" ]; then
+  echo "Fetching processes for group: $GROUP_ID ..." 1>&2
 
-if [ -z "$PROCESS_IDS" ]; then
-  echo "No processes found or failed to parse process IDs."
-  exit 1
-fi
+  PROCESSES_RESPONSE=$(curl "${CURL_COMMON[@]}" \
+    "$BASE_URL/groups/$GROUP_ID/processes")
 
-for PROCESS_ID in $PROCESS_IDS; do
-  # Log to STDERR so it doesn’t interfere with JSON output on STDOUT
-  echo "=== PROCESS: $PROCESS_ID ===" 1>&2
+  # Output one compact JSON per line:
+  # { id, typeName, userAlias, clusterName }
+  echo "$PROCESSES_RESPONSE" | jq -c '
+    .results // [] 
+    | .[] 
+    | {
+        id,
+        typeName,
+        userAlias,
+        clusterName: (
+          .userAlias 
+          | (split("-")[0] // "UNKNOWN")
+        )
+      }
+  '
+
+elif [ "$MODE" = "FETCH_SLOW" ]; then
+  PROCESS_ID="${PROCESS_ID:?PROCESS_ID environment variable not set}"
+
+  echo "Fetching slow queries for process: $PROCESS_ID" 1>&2
 
   API_URL="$BASE_URL/groups/$GROUP_ID/processes/$PROCESS_ID/performanceAdvisor/slowQueryLogs"
 
-  RAW_RESPONSE=$(curl --user "$PUBLIC_KEY:$PRIVATE_KEY" \
-    --digest \
-    --silent \
-    --header "Accept: application/vnd.atlas.2025-03-12+json" \
-    "$API_URL")
+  RAW_RESPONSE=$(curl "${CURL_COMMON[@]}" "$API_URL")
 
-  # Skip if empty response
-  if [ -z "$RAW_RESPONSE" ]; then
-    echo "No response for $PROCESS_ID" 1>&2
-    continue
-  fi
-
-  # ✅ Correct: iterate over .slowQueries, not .results
-  # This prints one JSON object per line (NDJSON)
+  # Print each slow query as a single JSON line (NDJSON)
   echo "$RAW_RESPONSE" | jq -c '.slowQueries // [] | .[]' 2>/dev/null
-done
+
+else
+  echo "Unknown MODE: $MODE" 1>&2
+  exit 1
+fi
