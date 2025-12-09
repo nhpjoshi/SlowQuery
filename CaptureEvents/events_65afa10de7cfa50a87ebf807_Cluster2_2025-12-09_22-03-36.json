@@ -1,0 +1,1285 @@
+{
+  "links" : [ {
+    "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events?pretty=true&clusterNames=Cluster2&pageNum=1&itemsPerPage=100",
+    "rel" : "self"
+  }, {
+    "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events?pretty=true&clusterNames=Cluster2&itemsPerPage=100&pageNum=2",
+    "rel" : "next"
+  } ],
+  "results" : [ {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:58:38Z",
+    "eventTypeName" : "CPS_CONCURRENT_SNAPSHOT_FAILED_WILL_RETRY",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693800de8d8d34458ea2c92c",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693800de8d8d34458ea2c92c",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6938003d961e7262d6d67669",
+    "snapshotScheduledCreationDate" : "2025-12-09T10:55:55Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:58:36Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693800dc8d8d34458ea2b583",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693800dc8d8d34458ea2b583",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:58:17Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693800c91d6ff320f062313d",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693800c91d6ff320f062313d",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:58:10Z",
+    "eventTypeName" : "CLUSTER_UPDATE_SUBMITTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693800c2635a7c583a68e158",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693800c2635a7c583a68e158",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:55:58Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6938003e4a6c5e305e43d370",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6938003e4a6c5e305e43d370",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6938003d961e7262d6d67669",
+    "snapshotScheduledCreationDate" : "2025-12-09T10:55:55Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T10:55:58Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6938003e961e7262d6d6770e",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6938003e961e7262d6d6770e",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T05:00:29Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937acede1739b351abaf164",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937acede1739b351abaf164",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-09T05:00:29Z",
+    "snapshotId" : "6937abdb7bb3be68f237b0af",
+    "snapshotScheduledCreationDate" : "2025-12-09T04:55:52Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T04:55:56Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937abdc8d8d34458ed4435d",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937abdc8d8d34458ed4435d",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6937abdb7bb3be68f237b0af",
+    "snapshotScheduledCreationDate" : "2025-12-09T04:55:52Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-09T04:55:55Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937abdb7bb3be68f237b358",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937abdb7bb3be68f237b358",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T23:01:09Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693758b58f3fec2de635a768",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693758b58f3fec2de635a768",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-08T23:01:09Z",
+    "snapshotId" : "69375778eb16151a6097f826",
+    "snapshotScheduledCreationDate" : "2025-12-08T22:55:51Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T22:55:52Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937577857aa2a0e46d39cd7",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937577857aa2a0e46d39cd7",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69375778eb16151a6097f826",
+    "snapshotScheduledCreationDate" : "2025-12-08T22:55:51Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T22:55:52Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69375778eb16151a6097faff",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69375778eb16151a6097faff",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-08T17:38:02Z",
+    "eventTypeName" : "CPS_OPLOG_CAUGHT_UP_AUDIT",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69370cfa3790a476ea658231",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69370cfa3790a476ea658231",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-08T17:33:03Z",
+    "eventTypeName" : "CPS_OPLOG_BEHIND_AUDIT",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69370bcf3790a476ea618b30",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69370bcf3790a476ea618b30",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T17:31:14Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69370b626767a515ee0a2e40",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69370b626767a515ee0a2e40",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T17:19:24Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937089c4bd05930b2a38277",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937089c4bd05930b2a38277",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T17:19:20Z",
+    "eventTypeName" : "CLUSTER_UPDATE_SUBMITTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6937089888ac405d4ade2ef9",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6937089888ac405d4ade2ef9",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T17:00:23Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69370427eedac36db11c0d4b",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69370427eedac36db11c0d4b",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-08T17:00:23Z",
+    "snapshotId" : "69370317491c0e39efb6d2ca",
+    "snapshotScheduledCreationDate" : "2025-12-08T16:55:45Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T16:55:51Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693703175ec07d4b29a5ed57",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693703175ec07d4b29a5ed57",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69370317491c0e39efb6d2ca",
+    "snapshotScheduledCreationDate" : "2025-12-08T16:55:45Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T16:55:51Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69370317491c0e39efb6d3a2",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69370317491c0e39efb6d3a2",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:45:00Z",
+    "eventTypeName" : "ONLINE_ARCHIVE_UPDATED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936ba3ce6c67808379631e9",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936ba3ce6c67808379631e9",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:44:19Z",
+    "eventTypeName" : "ONLINE_ARCHIVE_ACTIVE",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936ba13dd4c9716d18c6034",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936ba13dd4c9716d18c6034",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:43:27Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936b9df4bd05930b2d2368a",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936b9df4bd05930b2d2368a",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:43:10Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936b9ceff2e107c6809328b",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936b9ceff2e107c6809328b",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:43:09Z",
+    "eventTypeName" : "ONLINE_ARCHIVE_DATA_EXPIRATION_RULE_ENABLED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936b9cdcfef463afb15ca32",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936b9cdcfef463afb15ca32",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T11:43:09Z",
+    "eventTypeName" : "ONLINE_ARCHIVE_CREATED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936b9cdcfef463afb15c964",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936b9cdcfef463afb15c964",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T10:59:16Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936af84491c0e39efcc85b0",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936af84491c0e39efcc85b0",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-08T10:59:16Z",
+    "snapshotId" : "6936aeb110d4e4560704cee0",
+    "snapshotScheduledCreationDate" : "2025-12-08T10:55:42Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T10:55:46Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936aeb210d4e4560704d170",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936aeb210d4e4560704d170",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6936aeb110d4e4560704cee0",
+    "snapshotScheduledCreationDate" : "2025-12-08T10:55:42Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T10:55:45Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936aeb110d4e4560704d012",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936aeb110d4e4560704d012",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-08T07:38:44Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693680843ed8ec52419775c4",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693680843ed8ec52419775c4",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:38:44Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69368084a756b23b6ba84801",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69368084a756b23b6ba84801",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:38:37Z",
+    "eventTypeName" : "FTS_INDEX_BUILD_COMPLETE",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6936807d70b3992983c361cc",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6936807d70b3992983c361cc",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:37:38Z",
+    "eventTypeName" : "FTS_INDEX_UPDATED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69368042e6c678083783cf50",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69368042e6c678083783cf50",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:23:34Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367cf6a44f1b0cc9f3a51e",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367cf6a44f1b0cc9f3a51e",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:23:33Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367cf51a95f5107be1f2cc",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367cf51a95f5107be1f2cc",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:17:42Z",
+    "eventTypeName" : "FTS_INDEX_BUILD_COMPLETE",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b9634d7172be05aae93",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b9634d7172be05aae93",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:17:17Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b7d5ec07d4b29435771",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b7d5ec07d4b29435771",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:17:01Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b6d9967207095c2d787",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b6d9967207095c2d787",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:16:57Z",
+    "eventTypeName" : "FTS_INDEX_CREATED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b69e6707c7310fdd310",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b69e6707c7310fdd310",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:16:52Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_GET_DATABASE_COLLECTIONS",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b64e6707c7310fdc2d3",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b64e6707c7310fdc2d3",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:16:40Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b589c807e03f63f806e",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b589c807e03f63f806e",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-08T07:16:32Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b503ed8ec52418377be",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b503ed8ec52418377be",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:16:32Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b50a756b23b6b943647",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b50a756b23b6b943647",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:16:23Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b47677a747d2ac97bf9",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b47677a747d2ac97bf9",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-08T07:16:22Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_GET_AGGREGATED_VIEW_INFOS",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b461b1cd51b7614fddc",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b461b1cd51b7614fddc",
+      "rel" : "self"
+    } ],
+    "orgId" : "5f56a0ab54180c3b229d402d",
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T07:16:20Z",
+    "eventTypeName" : "FTS_INDEX_DELETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b443ed8ec524183483d",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b443ed8ec524183483d",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:16:15Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b3f2f98a12c726192b6",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b3f2f98a12c726192b6",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:16:15Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367b3fd918ae3372da98c5",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367b3fd918ae3372da98c5",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:13:30Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a9ae6c67808376dd169",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a9ae6c67808376dd169",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:13:30Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a9acfef463afbef3efe",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a9acfef463afbef3efe",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:13:12Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_GET_AGGREGATED_VIEW_INFOS",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a88a80fa76bb18637aa",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a88a80fa76bb18637aa",
+      "rel" : "self"
+    } ],
+    "orgId" : "5f56a0ab54180c3b229d402d",
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:13:09Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a8588ac405d4a186b7c",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a8588ac405d4a186b7c",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:56Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a781a95f5107bd83fc9",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a781a95f5107bd83fc9",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:56Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a78d4e66132197b7518",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a78d4e66132197b7518",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:52Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_GET_AGGREGATED_VIEW_INFOS",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a741b1cd51b7614f662",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a741b1cd51b7614f662",
+      "rel" : "self"
+    } ],
+    "orgId" : "5f56a0ab54180c3b229d402d",
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:48Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a70e667e36cd49d8ae7",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a70e667e36cd49d8ae7",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:46Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a6ed4e66132197b5452",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a6ed4e66132197b5452",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "created" : "2025-12-08T07:12:46Z",
+    "eventTypeName" : "CLUSTER_CONNECTION_SAMPLE_COLLECTION_FIELD_NAMES_AND_TYPES",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69367a6ee6707c7310fa22c8",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69367a6ee6707c7310fa22c8",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T05:02:14Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69365bd69d637d221fc3ad4f",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69365bd69d637d221fc3ad4f",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-08T05:02:14Z",
+    "snapshotId" : "69365a4ef445e42e9268b80d",
+    "snapshotScheduledCreationDate" : "2025-12-08T04:55:38Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T04:55:42Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69365a4e9c807e03f6f3d326",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69365a4e9c807e03f6f3d326",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69365a4ef445e42e9268b80d",
+    "snapshotScheduledCreationDate" : "2025-12-08T04:55:38Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-08T04:55:42Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69365a4ef445e42e9268b922",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69365a4ef445e42e9268b922",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T23:03:45Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693607d11b7ac328a46ea94c",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693607d11b7ac328a46ea94c",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-07T23:03:45Z",
+    "snapshotId" : "693605ea9967207095b9fb43",
+    "snapshotScheduledCreationDate" : "2025-12-07T22:55:32Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T22:55:39Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693605eb9967207095b9ff1f",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693605eb9967207095b9ff1f",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "693605ea9967207095b9fb43",
+    "snapshotScheduledCreationDate" : "2025-12-07T22:55:32Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T22:55:38Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693605ea9967207095b9fcc4",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693605ea9967207095b9fcc4",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T17:01:51Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6935b2ff934d7d43c2eb8d68",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6935b2ff934d7d43c2eb8d68",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-07T17:01:51Z",
+    "snapshotId" : "6935b1849967207095fded5a",
+    "snapshotScheduledCreationDate" : "2025-12-07T16:55:28Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T16:55:33Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6935b185aff48c667cd107a1",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6935b185aff48c667cd107a1",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6935b1849967207095fded5a",
+    "snapshotScheduledCreationDate" : "2025-12-07T16:55:28Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T16:55:32Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6935b1849967207095fdedfe",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6935b1849967207095fdedfe",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T11:01:15Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69355e7baff48c667cfe0050",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69355e7baff48c667cfe0050",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-07T11:01:15Z",
+    "snapshotId" : "69355d20934d7d43c2285dd0",
+    "snapshotScheduledCreationDate" : "2025-12-07T10:55:27Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T10:55:29Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "DAILY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69355d21468c1d0313e74e38",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69355d21468c1d0313e74e38",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69355d20934d7d43c2285dd0",
+    "snapshotScheduledCreationDate" : "2025-12-07T10:55:27Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T10:55:28Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69355d20934d7d43c2286064",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69355d20934d7d43c2286064",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T04:59:19Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693509a7f445e42e92699ad2",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693509a7f445e42e92699ad2",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-07T04:59:18Z",
+    "snapshotId" : "693508bf3ac1dd17fa884690",
+    "snapshotScheduledCreationDate" : "2025-12-07T04:55:24Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T04:55:28Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693508c04cc1e540268f1673",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693508c04cc1e540268f1673",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "693508bf3ac1dd17fa884690",
+    "snapshotScheduledCreationDate" : "2025-12-07T04:55:24Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-07T04:55:27Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693508bf3ac1dd17fa8849fc",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693508bf3ac1dd17fa8849fc",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T23:00:07Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934b577f445e42e92a50f12",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934b577f445e42e92a50f12",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-06T23:00:07Z",
+    "snapshotId" : "6934b45c10d4e45607889ebb",
+    "snapshotScheduledCreationDate" : "2025-12-06T22:55:21Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T22:55:25Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934b45d491c0e39ef03edb6",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934b45d491c0e39ef03edb6",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6934b45c10d4e45607889ebb",
+    "snapshotScheduledCreationDate" : "2025-12-06T22:55:21Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T22:55:25Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934b45d10d4e4560788a038",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934b45d10d4e4560788a038",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T17:00:16Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693461204cc1e54026f64648",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693461204cc1e54026f64648",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-06T17:00:16Z",
+    "snapshotId" : "69345ff9491c0e39ef38176d",
+    "snapshotScheduledCreationDate" : "2025-12-06T16:55:16Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T16:55:22Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69345ffaff2e107c688df1ab",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69345ffaff2e107c688df1ab",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69345ff9491c0e39ef38176d",
+    "snapshotScheduledCreationDate" : "2025-12-06T16:55:16Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T16:55:21Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69345ff9491c0e39ef3819f1",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69345ff9491c0e39ef3819f1",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-06T14:09:50Z",
+    "eventTypeName" : "CLUSTER_TAGS_MODIFIED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934392e60d59e2c0c98d695",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934392e60d59e2c0c98d695",
+      "rel" : "self"
+    } ],
+    "orgId" : "5f56a0ab54180c3b229d402d",
+    "remoteAddress" : "104.30.164.1",
+    "resourceId" : "690341ab38a20e761b5b90ff",
+    "resourceType" : "cluster",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:07:06Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934388a3ac1dd17fa9d0b25",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934388a3ac1dd17fa9d0b25",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:06:35Z",
+    "eventTypeName" : "FTS_INDEX_BUILD_COMPLETE",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934386bf3e6c856ff5eb6fa",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934386bf3e6c856ff5eb6fa",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:02:19Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934376b9967207095930e7b",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934376b9967207095930e7b",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:02:19Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6934376b9967207095930759",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6934376b9967207095930759",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:01:23Z",
+    "eventTypeName" : "CLUSTER_UPDATE_SUBMITTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69343733a4599b25a2f18644",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69343733a4599b25a2f18644",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.1",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:00:30Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693436fe468c1d0313370a11",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693436fe468c1d0313370a11",
+      "rel" : "self"
+    } ]
+  }, {
+    "apiKeyId" : "6195f07c734506204d2bfcc5",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T14:00:25Z",
+    "eventTypeName" : "CLUSTER_UPDATE_SUBMITTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "693436f91a95f5107bbc7e78",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/693436f91a95f5107bbc7e78",
+      "rel" : "self"
+    } ],
+    "publicKey" : "nxmrodso",
+    "remoteAddress" : "54.86.51.126"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T10:59:43Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "WEEKLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69340c9f996720709531523e",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69340c9f996720709531523e",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-06T10:59:43Z",
+    "snapshotId" : "69340b947316d6459b7c44bd",
+    "snapshotScheduledCreationDate" : "2025-12-06T10:55:10Z"
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T10:55:16Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "WEEKLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69340b944cc1e54026207f76",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69340b944cc1e54026207f76",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "69340b947316d6459b7c44bd",
+    "snapshotScheduledCreationDate" : "2025-12-06T10:55:10Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T10:55:16Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "69340b947316d6459b7c4573",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/69340b947316d6459b7c4573",
+      "rel" : "self"
+    } ]
+  }, {
+    "created" : "2025-12-06T10:02:58Z",
+    "eventTypeName" : "CPS_OPLOG_CAUGHT_UP_AUDIT",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933ff523790a476ea4ad445",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933ff523790a476ea4ad445",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T10:01:47Z",
+    "eventTypeName" : "CPS_SNAPSHOT_SUCCESSFUL",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933ff0b677a747d2a25480f",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933ff0b677a747d2a25480f",
+      "rel" : "self"
+    } ],
+    "snapshotCompletionDate" : "2025-12-06T10:01:47Z",
+    "snapshotId" : "6933fdf65ec07d4b297e312a",
+    "snapshotScheduledCreationDate" : "2025-12-05T16:55:17Z"
+  }, {
+    "created" : "2025-12-06T09:58:00Z",
+    "eventTypeName" : "CPS_OPLOG_BEHIND_AUDIT",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fe283790a476ea46ba6b",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fe283790a476ea46ba6b",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterId" : "690341ab38a20e761b5b90ff",
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:57:11Z",
+    "eventTypeName" : "CPS_SNAPSHOT_STARTED",
+    "frequencyType" : "HOURLY",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fdf710d4e45607dbd354",
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fdf710d4e45607dbd354",
+      "rel" : "self"
+    } ],
+    "snapshotId" : "6933fdf65ec07d4b297e312a",
+    "snapshotScheduledCreationDate" : "2025-12-05T16:55:17Z"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:57:10Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fdf65ec07d4b297e326b",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fdf65ec07d4b297e326b",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:57:09Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fdf55ec07d4b297e2e63",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fdf55ec07d4b297e2e63",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:56:22Z",
+    "eventTypeName" : "FTS_INDEX_BUILD_COMPLETE",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fdc623ff5c469c69c575",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fdc623ff5c469c69c575",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:52:12Z",
+    "eventTypeName" : "CLUSTER_UPDATE_STARTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fccc10d4e45607d98630",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fccc10d4e45607d98630",
+      "rel" : "self"
+    } ]
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-06T09:52:07Z",
+    "eventTypeName" : "CLUSTER_UPDATE_SUBMITTED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6933fcc7a44f1b0cc95fa17e",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6933fcc7a44f1b0cc95fa17e",
+      "rel" : "self"
+    } ],
+    "remoteAddress" : "104.30.164.15",
+    "userId" : "65aa706645d09f7236ef1e75",
+    "username" : "nitish.joshi@mongodb.com"
+  }, {
+    "clusterName" : "Cluster2",
+    "created" : "2025-12-05T14:02:34Z",
+    "eventTypeName" : "CLUSTER_UPDATE_COMPLETED",
+    "groupId" : "65afa10de7cfa50a87ebf807",
+    "id" : "6932e5faf445e42e9264dab8",
+    "isGlobalAdmin" : false,
+    "links" : [ {
+      "href" : "https://cloud.mongodb.com/api/atlas/v2/groups/65afa10de7cfa50a87ebf807/events/6932e5faf445e42e9264dab8",
+      "rel" : "self"
+    } ]
+  } ],
+  "totalCount" : 515
+}
