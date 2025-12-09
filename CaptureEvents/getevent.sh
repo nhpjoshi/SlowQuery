@@ -12,8 +12,8 @@ if [[ -z "$PROJECT_ID" ]]; then
 fi
 
 # === CONFIG (STATIC CREDENTIALS) ===
-PUBLIC_KEY="jyvaogjf"
-PRIVATE_KEY="5d2cc776-f862-4b9b-b3b3-a389553352b2"
+PUBLIC_KEY=""
+PRIVATE_KEY=""
 
 # === OUTPUT CLUSTER NAME ===
 OUTPUT_CLUSTER_NAME="${CLUSTER_NAME:-all-clusters}"
@@ -42,3 +42,4 @@ curl --user "${PUBLIC_KEY}:${PRIVATE_KEY}" \
   > "${OUTPUT_FILE}"
 
 echo "Events saved to: ${OUTPUT_FILE}"
+
